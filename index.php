@@ -47,7 +47,7 @@ try {
                 $newDeviceId=$pdo->lastInsertId();
                 $insertNewRecord = "INSERT INTO grace_temperature_record(temperature, device_ref) VALUES($tempFromPostman, $newDeviceId)";
                 $pdo->exec($insertNewRecord);
-                echo "added new record with New Device!";
+                echo "Added new record with New Device!";
                 }
 
             if($deviceId->rowCount()>0){
@@ -56,7 +56,7 @@ try {
                 }
             $insertNewRecord = "INSERT INTO grace_temperature_record(temperature, device_ref) VALUES($tempFromPostman, $id)";
             $pdo->exec($insertNewRecord);
-            echo "added new record with already-inserted Device!";
+            echo "Added new record with already-inserted Device!";
             unset($deviceId);
         }
     }else{
